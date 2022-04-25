@@ -1,0 +1,58 @@
+<div class="container-fluid">
+    <img id="adminpic" src="../../../../../assets/adminpng.png" alt="">
+    <div class="modal-body">
+        <div class="card">
+            <h4 class="ml-3">product update <img src="../../../../../assets/update.png" id="imgu" alt=""></h4>
+            <div class="card-body">
+                <form [formGroup]="form" id="sub" (ngSubmit)="updatedata()">
+                    <div class="row">
+
+                        <div class="col-md-4 mb-3">
+                            <label for="product">product name</label>
+                            <input type="text" class="form-control" id="product" aria-describedby="name"
+                                placeholder="name" formControlName="lib_produit" [(ngModel)]="prod.lib_produit">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="quantity">quantity</label>
+                            <input type="number" class="form-control" id="quantity" 
+                                formControlName="qte_produit" [(ngModel)]="prod.qte_produit">
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <label for="price">price</label>
+                            <input type="number" class="form-control" id="price" 
+                                formControlName="prix_produit" [(ngModel)]="prod.prix_produit">
+                        </div>
+                        <div class=" col-md-5">
+                            <label for="option">category</label>
+                            <select name="id_cat" id="option" class="form-control" formControlName="id_cat"
+                                [(ngModel)]="prod.id_cat">
+                                <option value="1" selected disabled> -- </option>
+                                <option [selected]="prod.id_cat==1" value="1">Laptops</option>
+                                <option [selected]="prod.id_cat==4" value="4">Accessories</option>
+                                <option [selected]="prod.id_cat==3" value="3">Monitors</option>
+                                <option [selected]="prod.id_cat==2" value="2">Audio</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="form-outline mb-4">
+                            <label class="form-label" for="desc">description</label>
+                            <textarea class="form-control" id="desc" rows="4" formControlName="description"
+                                [(ngModel)]="prod.description"></textarea>
+
+                        </div>
+                    </div>
+                    <div class="row"><label class="form-label" for="img">image Name</label>
+                        <input type="text" class="form-control" id="img" formControlName="img_produit" />
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" routerLink="/admin">Close</button>
+                <button type="submit" form="sub" class="btn btn-info">Update</button>
+            </div>
+
+        </div>
+    </div>
+</div>

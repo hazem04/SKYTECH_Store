@@ -1,0 +1,28 @@
+.modal-body{
+    width: 30%;
+    position:absolute;
+    left:35%;
+    top: 130px;
+    border-radius: 5%;
+}
+
+#imgu{
+    width: 10%;
+    height: 10%;
+}
+.card-title{
+    position: relative;
+    left: 100px;
+}
+.container-fluid{
+    height:100vh;
+    width:100%;
+    background-color:#3c3c3c;
+}
+#adminpic{
+    position: absolute;
+    top: 20px;
+    height: 110px;
+    width: 110px;
+right: 47%;
+}

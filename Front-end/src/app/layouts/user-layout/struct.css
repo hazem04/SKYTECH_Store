@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Poppins&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Roboto:wght@500&display=swap');
+
+
+body {  margin: 0;
+     font-family: 'poppins';
+     background: #343434;
+    }
+
+header{
+    color: white;
+   
+}
+
+.title{
+display: flex;
+align-items:center;
+}
+
+.title span{
+    font-size:2.5em;
+    font-family: 'Kanit', sans-serif;
+    
+}
+
+.title img{ 
+    width:3.5em;
+    margin-right:1em;
+
+}
+
+.container1{
+    display:flex; 
+    justify-content: space-between;
+    align-items: center;
+ width:100%;
+ background-color:  black;
+ padding-left:1em;
+ padding-top:0.3em;
+ padding-bottom:0.3em;
+}
+
+.middle{
+    text-align:center;
+    flex-basis: 50EM;
+    padding: 0;
+    margin:0;
+  
+    position: relative;
+}
+#searchbar{
+    border-radius: 50px;
+    
+    margin:auto auto;
+    
+    margin-top: 1em; 
+    position: absolute;
+    top:-30px;
+    right:63px;
+    
+   
+}
+
+header .menu{
+    display:none;
+}
+
+.cart{ 
+   padding-right:2em;
+display:flex;
+align-items: center;
+flex-wrap: wrap;
+text-align:right;
+
+
+
+                                                
+
+}
+
+.cart span{
+font-size:1.1em;
+margin-right:0.5em;
+
+}
+.cart img {
+vertical-align:middle;
+width:5%;  
+margin-left:1em;        
+}
+
+
+
+header a{
+    text-decoration: none;
+    color:white;
+
+}
+nav{
+    background-color:#3c3c3c ;
+    padding:0.7em;
+    text-align: center;
+   
+}
+nav a{
+    font-size:0.7Em;
+    font-weight:bold;
+    text-decoration: none;
+    margin: 0.7EM 0.7EM;
+    color:white;
+}
+
+
+
+
+
+
+
+
+a:hover{
+    color: #94dce8;
+}
+footer{
+    background-color: #4b4949df; ;
+    color:white;
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    width:100%;
+    grid-gap: 15%;
+
+}
+
+footer div{
+    width:100%;
+    margin-top:2.5EM; 
+    margin-bottom:1.5em;
+   
+
+}
+footer span{
+    font-weight:bold;
+
+
+}
+
+footer a{
+    margin-top:1em;
+    text-decoration:none;
+    color:white;
+    font-size: 0.7em;
+}
+footer .d1 p{
+    font-size: 0.7em;
+}
+
+
+
+@media screen and (max-width:762px){
+
+    header .title span{
+        font-size:2em;
+       
+    }
+    header .title img{
+        width:3em;
+    }
+
+header .menu {
+  display:block;
+}
+
+header .menu img{
+    width:1.8em;
+}
+
+header .menu .button{
+    margin-right:1em;
+}
+
+
+ .dropdown-content{
+  position: absolute;
+  z-index: 1;
+  background-color: white;
+  color:black;
+  width:90%;
+ left: 40%;
+ padding:0% 0 10% 1em;
+ top:0;
+ font-size:1.4em;
+ text-align: left;
+ display:none;
+ 
+}
+.menu .dropdown-content p{
+    background-color: #343434;
+    color:white;
+    padding-left:1em;
+    margin-left:-1em;
+    padding-top:5%;
+    padding-bottom:5%;
+}
+    .menu .dropdown-content span{
+        font-weight:bold;
+       
+    }
+        
+    .menu .dropdown-content a{
+        color:black;
+        display:block;
+        margin-bottom:0.4em;
+        border-top:rgba(179, 176, 176, 0.733) 1px solid;
+        
+    }
+    
+
+.menu .button:active + .dropdown-content{
+    display:block;
+    
+}
+.dropdown-content:hover{
+    display:block;
+  
+   
+    
+}
+
+
+
+    header .cart{
+        display:none;
+    }
+
+    header #searchbar{
+        display:none;
+    }
+
+    nav a{
+        font-size:0.6em;
+    }
+   
+footer div{
+    margin-top:0; 
+    margin-bottom:0;
+}
+    footer{
+        padding-top:2EM;
+        padding-bottom:8em;
+        grid-template-columns: auto;
+        grid-gap:3%;
+        justify-content:left;
+        padding-left:2EM;
+       
+        
+    }
+    footer span{
+        font-size:1em;
+    }
+footer a{
+    margin-top:0.5em;
+}
+footer div{
+    border-top:1px rgba(255, 255, 255, 0.739) solid;
+    padding-top:4%;
+}
+}
+
+
+@media screen and (max-width:1300px){
+    #searchbar{
+      right:75px;
+    }
+    .cart img {
+        
+        width:10%; 
+            
+        }
+        
+}

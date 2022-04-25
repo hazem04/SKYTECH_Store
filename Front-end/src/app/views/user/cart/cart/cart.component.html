@@ -1,0 +1,114 @@
+
+<div class="container mt-5">
+    <div class="row">
+    <div class="offset-md-2 col-md-5">
+        <ng-container *ngIf="alertMessage!==''">
+       <div class="alert alert-success" id="alert">{{alertMessage}}<fa-icon class="float-end" [icon]="faCross" (click)="removeNotification()"></fa-icon></div>
+    </ng-container>
+    </div>
+    </div>  
+    <div class="row">
+        <ng-container *ngIf="dataArray.length==0; else exist">
+            <div class="offset-2 col-md-5">
+                <h1>Cart is empty..</h1>
+                <img src="../../../../../assets/sadFace.svg" height="300" width="300">
+    
+            </div>
+            <!--Checking out-->
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-header text-center">
+                        <h3>Order Summary</h3>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <span>Merchandise:</span>
+                            <span class="float-end">-</span>
+                        </div>
+                        <div>
+                            <span>Shipping:</span>
+                            <span class="float-end">-</span>
+                        </div>
+                        
+                    </div>
+                    
+                    <hr width="100%">
+                    <div class="card-body">
+                        <div>
+                            <span class="fw-bold">Total TTC</span>
+                            <span class="fw-bold float-end">-</span>
+                        </div>
+                    </div>
+                    
+                    <div class="d-grid">
+                        <button disabled class="btn btn-block btn-secondary">Checkout</button>
+                    </div>
+                  </div>
+            </div>
+           </ng-container>
+           <ng-template #exist>
+        <!--Checking out-->
+        <div class="col-md-7">
+            <h2 class="fw-bold"f>Cart<fa-icon class="float-end btn btn-outline-warning" [icon]="faTrash" (click)="deleteAllProducts()"></fa-icon></h2>
+            <table class="table mt-3">
+                <thead class="table-secondary">
+                    <tr>
+                        <th>Product</th>
+                        <th>Product Name</th>
+                        <th>Total</th>
+                        <th>Quantity</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!--https://via.placeholder.com/240x240/FF0000/000000-->
+                    <tr *ngFor="let item of dataArray">
+                        <td style="padding-left:0;"><a class="cart-item-thumb  mr-sm-4" href="#"><img src="../../../../../assets/products/{{item.image_produit}}" height="100" alt="Product"></a></td>
+                        <td class="align-middle">{{item.lib_produit}}</td>
+                        <td class="fw-bold align-middle">{{item.prix_produit}}TND</td>
+                        <td class="fw-bold align-middle"><input class="form-control  form-control-sm" id="{{item.id_produit}}" type="number" min="0" value="{{item.qte_produit}}" (change)="changingQuantity(item)">
+                            </td>
+                        <td class="fw-bold align-middle">
+                            <button class="btn btn-outline-dark btn-sm " type="button" (click)="deleteProduct(item)">
+                                <fa-icon class="icon" [icon]="faTrash" ></fa-icon></button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <a class="text-secondary" routerLink="/products/Shopall"><- Continue Shopping</a>
+        </div>
+        <!--Checking out-->
+        <div class="col-md-5">
+            <div class="card">
+                <div class="card-header text-center">
+                    <h3>Order Summary</h3>
+                </div>
+                <div class="card-body">
+                    <div>
+                        <span>Merchandise:</span>
+                        <span class="float-end">{{merchandise}} TND</span>
+                    </div>
+                    <div>
+                        <span>Shipping:</span>
+                        <span class="float-end">{{shippingprice}}</span>
+                    </div>
+                    
+                </div>
+                
+                <hr width="100%">
+                <div class="card-body">
+                    <div>
+                        <span class="fw-bold">Total TTC</span>
+                        <span class="fw-bold float-end">{{totalprice}} TND</span>
+                    </div>
+                </div>
+                
+                <div class="d-grid">
+                    <button (click)="TotalPrice()" [disabled]="quantitySurpassed==true" routerLink="/payment" class="btn btn-block btn-success">Checkout</button>
+                </div>
+              </div>
+              <span style="padding-left:100px;"><fa-icon class="icon" [icon]="faTruck"></fa-icon> FREE on orders of 50TND or more</span>
+        </div>
+        
+    </ng-template>
+    </div>
+</div>

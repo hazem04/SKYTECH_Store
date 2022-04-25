@@ -1,0 +1,29 @@
+
+.notfound{
+    position: absolute;
+    top: 20%; right: 50%;
+    transform: translate(50%,-50%);
+    font-family: Poppins,sans-serif;
+    font-weight: 800;
+    /*background-color: #00e6ff;
+    background-image: linear-gradient(to bottom right,#96f8ff 42%,#00e6ff 76);*/
+    background:#fff;
+    background-size: 100%;
+    background-clip:text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+    
+}
+img{
+position: absolute;
+    top: 45%; right: 50%;
+    transform: translate(50%,-50%);
+}
+.container-fluid{
+height:100vh;
+background:#0d1D31;
+background-image: linear-gradient(to right bottom,#0d1d3a,#1a2f55 52%,#365a83);
+
+}

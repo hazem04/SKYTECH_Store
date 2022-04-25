@@ -1,0 +1,124 @@
+<div class="ledty">
+    <nav class="navbar navbar-dark navbar bg-dark">
+        <div class="container-fluid">
+            <h1 style="color:aliceblue;">product manager</h1>
+            <div class="d-flex">
+                <button class="btn btn-warning mr-4" (click)="logout()">
+                    Disconnect
+                </button>
+                <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    add product
+                </button>
+            </div>
+        </div>
+    </nav>
+    <img id="adminpic" src="../../../../../assets/adminpng.png" alt="">
+    <table datatable="ng" class="table mt-3 table-dark table-hover table-responsive-xl">
+        <thead>
+            <tr>
+                <th scope="col">&nbsp;</th>
+
+                <th scope="col">price </th>
+                <th scope="col">quantity</th>
+                <th scope="col">category</th>
+                <th scope="col">description</th>
+                <th scope="col">mail admin</th>
+                <th class="text-center">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pr of products">
+                <td scope="row" class="show">
+                    <div><img id="prodpic" src="../../../../../assets/products/{{pr.img_produit}}" alt=""
+                            style="height: 60px; width: 60px;"></div>
+                    <div class="idpos">id:{{pr.id_produit}} <br> name:{{pr.lib_produit}}</div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                </td>
+
+                <td scope="row">{{pr.prix_produit}}</td>
+                <td scope="row">{{pr.qte_produit}}</td>
+                <td scope="row">{{pr.id_cat}}</td>
+                <td scope="row">{{pr.description}}</td>
+                <td scope="row">{{pr.mail_admin}}</td>
+                <td>
+                    <div class="d-flex justify-content-around">
+                    <div> <button class="btn btn-info "
+                            routerLink="changeProduct/{{pr.id_produit}}">edit</button></div>
+                    <div> <button  class="btn btn-danger"
+                            (click)="deleteproduct(pr.id_produit)">delete</button></div>
+                        </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Product details</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form id="sub" (ngSubmit)="insertdata()">
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <label for="product">product name</label>
+                                <input type="text" class="form-control" id="product" aria-describedby="name"
+                                    placeholder="name" [(ngModel)]="prod.lib_produit"
+                                    [ngModelOptions]="{standalone: true}">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="qte">quantity</label>
+                                <input type="number" class="form-control" id="qte" placeholder="price"
+                                    [(ngModel)]="prod.qte_produit" [ngModelOptions]="{standalone: true}">
+                            </div>
+                            <div class="col-md-3 mb-3">
+                                <label for="price">price</label>
+                                <input type="number" class="form-control" id="price" placeholder="price"
+                                    [(ngModel)]="prod.prix_produit" [ngModelOptions]="{standalone: true}">
+                            </div>
+                            <div class=" col-md-5">
+                                <label for="option">category</label>
+                                <select name="id_cat" id="option" class="form-control" [(ngModel)]="prod.id_cat"
+                                    [ngModelOptions]="{standalone: true}">
+                                    <option value="0" selected disabled> -- </option>
+                                    <option value="1">Laptops</option>
+                                    <option value="4">Accessories</option>
+                                    <option value="3">Monitors</option>
+                                    <option value="2">Audio</option>
+                                </select>
+                            </div>
+                           
+                        </div>
+                        
+                        <div class="row">
+                            <div class="form-outline mb-4">
+                                <label class="form-label" for="desc">description</label>
+                                <textarea class="form-control" id="desc" rows="4" [(ngModel)]="prod.description"
+                                    [ngModelOptions]="{standalone: true}"></textarea>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <label class="form-label" for="img">image Name</label>
+                            <input type="text" class="form-control" id="img"
+                                [(ngModel)]="prod.img_produit" [ngModelOptions]="{standalone: true}" />
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" form="sub" class="btn btn-primary">add</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

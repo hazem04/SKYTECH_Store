@@ -1,0 +1,216 @@
+main{
+    background-color: #3c3c3c;
+    height:133vh;
+}
+.slider{
+    width:100%;
+    background: url("../../../../../assets/mainpics/glorious_gpbt_celestial_keycaps_homepage_fire.png") no-repeat;
+    background-size: cover;
+    height:30em;
+    background-position: center;
+    position:relative;
+    
+
+}
+
+.slider .textbox{
+    top:25%;
+    left:10%;
+    width:20em;
+    position: absolute;
+    
+    color:white;
+}
+.slider span:first-child{ 
+    background-color: red;
+    color:white;
+    padding-left: 0.4em;
+    padding-right:0.4em;
+    
+}
+.slider p{
+    margin-top:1em;
+    font-weight:bold;
+    font-size:1.7em;
+}
+.slider button{
+    background-color:#f4b33a;
+    color:white;
+    border-radius: 1Em;
+    padding-left:2em;
+    padding-right:2Em;
+    margin-top:1.5Em;
+    font-weight:bold;
+}
+
+
+
+
+
+
+.container2{
+    background-color: #989494;
+    text-align:center;
+    display:grid;
+    grid-template-columns:auto auto auto auto;
+    padding-top:3em;
+    padding-bottom:3EM;
+    margin-top:1em;
+    margin-bottom:1em;
+}
+.container2 .list{
+   
+    display:flex;
+    
+    justify-content:center;
+    
+    align-items:center;
+    
+}
+.container2 img{
+width:3em;
+margin-right:1Em;
+-webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
+
+}
+.container2 span{
+    font-weight:bold;
+    -webkit-text-stroke-width: 0.0001px;
+        -webkit-text-stroke-color: rgb(0, 0, 0);
+}
+
+
+.container2 .wrapper{
+width:32%;
+}
+
+
+
+
+
+
+
+.recomend{
+    text-align: center;
+    width:95%;
+    background-color: #4b4949df;
+    margin:1EM auto 1em auto;
+    padding-top:3em;
+    padding-bottom:3em;
+    
+}
+
+.recomend span{
+    color: #94dce8  ;
+    font-weight:bold;
+    font-size:1.3em;
+    letter-spacing: 3px;
+    
+
+    
+   
+}
+
+.recomend .offers{
+    margin-top:3Em;
+    display:grid;
+  
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    text-align: center;
+    
+}
+.recomend .card{ 
+    margin-right:auto;
+    margin-left:auto;
+    background-color: rgb(34, 34, 34);
+width:73%;
+border-radius: 0.5em;
+
+height:100%;
+text-align:left;
+}
+@keyframes up{
+    from {transform: scale(100%);}
+    to {transform: scale(110%);}
+}
+
+.recomend .card:hover{
+   
+    animation-name:up;
+    animation-duration: 0.4s;
+    transform: scale(110%);
+}
+
+.recomend .img{ 
+    border-radius: 0.5em;
+}
+.recomend .card .card-title{
+    color:rgb(117, 117, 117);
+}
+.recomend .card .card-text{
+    color: rgba(105, 104, 104, 0.575);
+}
+.recomend .card .card-link{
+    color:#94dbe88a;
+}
+
+
+
+
+.sponsor{
+    width:95%;
+    background-color:#dad6d6;
+    
+    background-position: center;
+    display:grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    align-items: center;
+    margin:1.1EM auto 1em auto;
+
+}
+.sponsor img{
+    width:50%;
+    margin-left:auto;
+    margin-right:auto
+}
+
+
+
+
+@media screen and (max-width:762px){
+    .slider{
+        background-position:left;
+        height:30em;
+       
+    }
+    .container2{
+        grid-template-columns: auto;
+    }
+    .container2 .list{
+        flex-direction:column;
+    }
+    .container2 .wrapper{
+        width:60%;
+        margin-bottom:15%;
+    }
+  
+    .container2 img{
+        margin-bottom:7%;
+    }
+   
+    .recomend .offers{
+        grid-template-columns:auto;
+        grid-gap: 50px;
+    }
+
+    
+
+    .sponsor{
+        grid-template-columns: auto auto ;
+    }
+
+   
+
+}

@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-11 offset-lg-1 col-lg-5 form">
+            <form class="needs-validation" #f="ngForm" (ngSubmit)="login()">
+            <h2 class="setup" data-text="Signing in">Signing in</h2>
+           
+                
+            <div class="form-floating">
+                <input type="text" id="mail_user" class="form-control" name="mail_user" ngModel #mail_user="ngModel" placeholder="email" required>
+                <label for="emailAddress" class="form-label">Email Address</label>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                    
+            <div class="form-floating">
+                <input type="password" id="password_user" class="form-control" name="password_user" ngModel #password_user="ngModel" placeholder="Password" required>
+                <label for="emailAddress" class="form-label">Password</label>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+           <!-- <div class="form-check form-switch">
+                <input type="checkbox" id="c1" class="form-check-input">
+                <label for="c1" class="form-check-label">Stay connected</label>
+            </div>-->
+            <div class="text-danger" *ngIf="errorMessage">
+                {{errorMessage}}
+            </div>
+                <div class="row d-grid">
+            <button class="col-3 btn btn-warning btn-block">Log in</button></div>
+           
+            <hr style="height: 5px;">
+            <div class="signUpDiv">
+               <span> Don't have an account ? </span><a class="signUp" routerLink="/signup"> Sign up <img src="../../../../../assets/signup/signinicon.png" alt="signinicon" height="20px"></a>
+            </div>
+            </form>
+        </div>
+        <div class="offset-1 col-5 deco" >
+            <img id="decoration" class="img-fluid float-end" src="../../../../../assets/signup/signingdecoration.png" alt="signupdecoration">
+        </div>
+    </div>
+</div>

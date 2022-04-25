@@ -1,0 +1,49 @@
+/* colors
+#f4b33a : yellow
+
+#94dce8 : blue
+
+Dark gray: #343434
+
+Gray: #3c3c3c*/
+.container{
+    height:66vh;
+}
+a{
+    font-family: Poppins,sans-serif;
+    font-weight: 600;
+}
+.btn-success{
+    background-color: #343434;
+    border-color:#343434;
+    color:#f4b33a;
+}
+.btn-outline-warning{
+    border-color:#f4b33a;
+    color:#f4b33a;
+}
+.btn-outline-warning:hover,.btn-success:hover{
+    border-color:#f4b33a;
+    color:#343434;
+    background-color: #f4b33a;
+}
+.btn{
+    border-radius:0%
+}
+.icon{
+    cursor:pointer;
+}
+
+.cart-item-thumb {
+    display: block;
+    width: 10rem
+}
+
+.cart-item-thumb>img {
+    display: block;
+    width: 100%
+}
+
+input{
+    width:5rem;
+}

@@ -1,0 +1,54 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-11 offset-lg-1 col-lg-6 form">
+            <form #f="ngForm" class="needs-validation" (ngSubmit)="verifyData()">
+            <h2 class="setupup" data-text="Set up your account">Set up your account</h2>
+            <div class="form-floating " style="margin-top: 30px;">
+            <input type="text" id="firstname" class="form-control" placeholder="First Name" required name="firstName" ngModel #firstname="ngModel">
+            <label for="firstName" class="form-label">First Name</label>
+            <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+
+            <div class="form-floating">
+                <input type="text" id="lastname" class="form-control" placeholder="Last Name" required name="lastName" ngModel #lastname="ngModel">
+                <label for="lastName" class="form-label">Last Name</label>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                
+            <div class="form-floating">
+                <input type="text" id="num_tel" class="form-control" placeholder="Number" required name="mobileNumber" ngModel #mobilenumber="ngModel">
+                <label for="mobileNumber" class="form-label">Mobile Number</label>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                
+            <div class="form-floating">
+                <input type="text" id="mail_user" class="form-control" placeholder="Email" required name="emailAddress" ngModel #emailaddress="ngModel">
+                <label for="emailAddress" class="form-label">Email Address</label>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                    
+            <div class="form-floating">
+                <input type="password" id="password_user" class="form-control" placeholder="Password" required name="password" ngModel #password="ngModel">
+                <label for="emailAddress" class="form-label">Password</label>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                    
+            <div class="form-floating">
+                <input type="password" id="confirmpassword_user" class="form-control" placeholder="Password" required name="confirmPassword" ngModel #confirmpassword="ngModel">
+                <label for="confirmPassword" class="form-label">Confirm Password</label>
+                <div class="invalid-feedback">Please fill out this field.</div>
+                </div>
+                <div class="row d-grid">
+            <div class="errorMessage" *ngIf="errorMessage">{{errorMessage}}</div>
+            <button class="offset-sm-2 col-3 btn btn-warning btn-block"  >Continue</button></div>
+            <hr style="height: 5px;">
+            <div class="signInDiv">
+                Already have an account ? <a routerLink="/signin" class="signIn"> Sign in <img src="../../../../../assets/signup/signinicon.png" alt="signinicon" height="20px"></a>
+            </div>
+            </form>
+        </div>
+        <div class="offset-3 col-5 deco" >
+            <img id="decoration" class="img-fluid float-end" src="../../../../../assets/signup/signingdecoration.png" alt="signupdecoration">
+        </div>
+    </div>
+</div>
