@@ -2,17 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Roboto:wght@500&display=swap');
 
 
-body {  
-    min-height: 100vh;
-        display: flex;
-        flex-direction: column;
+body {  margin: 0;
      font-family: 'poppins';
      background: #343434;
     }
+    body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 
-    footer{
-        margin-top: auto;
-    }
 
 header{
     color: white;
@@ -128,6 +127,8 @@ a:hover{
     color: #94dce8;
 }
 footer{
+    position:absolute;
+    bottom:0;
     background-color: #4b4949df; ;
     color:white;
     display:grid;
@@ -252,6 +253,9 @@ footer div{
     margin-bottom:0;
 }
     footer{
+        
+        position:relative;
+        bottom:0;
         padding-top:2EM;
         padding-bottom:8em;
         grid-template-columns: auto;

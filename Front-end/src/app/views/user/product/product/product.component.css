@@ -23,8 +23,10 @@ h3{
     color:#f4b33a;
 }
 .cont{
-    height:70vh;
-    background-color:rgb(244, 245, 246);
+    min-height:100;
+    display:block;
+    
+    /*background-color:rgb(244, 245, 246);*/
 }
 
 .card-content{

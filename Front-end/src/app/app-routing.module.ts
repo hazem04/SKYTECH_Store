@@ -19,7 +19,6 @@ const routes: Routes = [
     {path:'',loadChildren:()=>import('./views/admin/all-products/all-products.module').then(m=>m.AllProductsModule)},
     {path:'changeProduct/:edit',loadChildren:()=>import('./views/admin/change-product/change-product.module').then(m=>m.ChangeProductModule)}
   ]},
-  {path:'products',loadChildren:()=>import('./views/admin/all-products/all-products.module').then(m=>m.AllProductsModule)},
   {path:'**',component:NotfoundComponent}
 
 ];

@@ -1,77 +1,84 @@
 <header>
     <div class="container1">
-            <div class="title" routerLink="/">
-                <img src="../../../assets/mainpics/logo-removebg-preview.png"  alt="" >
-               <span>SkyTech</span>
-           </div>
-       
-  
-            <div class="middle">          
-           <div id="searchbar" class="input-group input-group-sm mb-3" style="width:50%;" >
-               <input type="text" id="search" class="form-control" placeholder=" Search..."  aria-describedby="inputGroup-sizing-sm"style=" border-radius: 50px 0 0 50px; ">
-              <button (click)="searchProduct()" class="btn" style="background-color:#f4b33a;  border-radius: 0 50px 50px 0;" ><span style="color:white;">Search</span></button>
-
-           </div>
-       </div> 
-
-       <div class="menu">
-           <a href="" class="button" style="padding:0; background-color:black; border:none;">
-           
-           <img src="../../../assets/mainpics/icons/menu-svgrepo-com.svg"  alt="">
-         
-       </a>
-           
-       
-       <div class="dropdown-content">
-           <p>Menu</p>
-           <a routerLink="/signin">Login</a>
-           <a routerLink="/signup">Signup</a>
-           <a routerLink="/cart" class="margin-bottom:2Em;">Cart</a>
-           <span>Categories</span>
-           <a routerLink="/products/ShopAll" >shop all</a>
-           <a routerLink="/products/Laptops">Laptops</a>
-           <a routerLink="/products/Accessories">Accessories</a>
-           <a routerLink="/products/Monitors">Monitors</a>
-           <a routerLink="/products/Monitors">Audio</a>
-
-       </div>
-       </div>
-   
+        <div class="title" routerLink="/">
+            <img src="../../../assets/mainpics/logo-removebg-preview.png" alt="">
+            <span>SkyTech</span>
+        </div>
 
 
-       
-        <div *ngIf="LoggedIn==true;else elseBlock" class="cart" >
-            <div >
+        <div class="middle">
+            <div id="searchbar" class="input-group input-group-sm mb-3" style="width:50%;">
+                <input type="text" id="search" class="form-control" placeholder=" Search..."
+                    aria-describedby="inputGroup-sizing-sm" style=" border-radius: 50px 0 0 50px; ">
+                <button (click)="searchProduct()" class="btn"
+                    style="background-color:#f4b33a;  border-radius: 0 50px 50px 0;"><span
+                        style="color:white;">Search</span></button>
+
+            </div>
+        </div>
+
+        <div class="menu">
+            <a href="" class="button" style="padding:0; background-color:black; border:none;">
+
+                <img src="../../../assets/mainpics/icons/menu-svgrepo-com.svg" alt="">
+
+            </a>
+
+
+            <div class="dropdown-content">
+                <p>Menu</p>
+                <a routerLink="/signin">Login</a>
+                <a routerLink="/signup">Signup</a>
+                <a routerLink="/cart" class="margin-bottom:2Em;">Cart</a>
+                <span>Categories</span>
+                <a routerLink="/products/ShopAll">shop all</a>
+                <a routerLink="/products/Laptops">Laptops</a>
+                <a routerLink="/products/Accessories">Accessories</a>
+                <a routerLink="/products/Monitors">Monitors</a>
+                <a routerLink="/products/Monitors">Audio</a>
+
+            </div>
+        </div>
+
+
+
+
+        <div *ngIf="LoggedIn==true;else elseBlock" class="cart">
+            <div>
                 <a (click)="logout()">
-            <img src="../../../assets/mainpics/icons/profile-svgrepo-com.svg"  alt="">
-           
-           <span>Logout</span>
-           
-       </a>
-       <a routerLink="/cart">
-            <img src="../../../assets/mainpics/icons/cart-svgrepo-com.svg"   alt="">
-           <span>Cart</span>
-       </a>
-       </div>
-           
-       
-        </div> 
+                    <img src="../../../assets/mainpics/icons/profile-svgrepo-com.svg" alt="">
+
+                    <span>Logout</span>
+
+                </a>
+                <a routerLink="/cart">
+                    <img src="../../../assets/mainpics/icons/cart-svgrepo-com.svg" alt="">
+                    <span>Cart</span>
+                </a>
+            </div>
+
+
+        </div>
         <ng-template #elseBlock>
-           
-            <div >
-                <a (click)="login()">
-            <img src="../../../assets/mainpics/icons/profile-svgrepo-com.svg"  alt="">
-           
-           <span>Login</span>
-           
-       </a>
-       
-       </div>
+            <div class="cart">
+            <div>
+                <a routerLink="/signin">
+                    <img src="../../../assets/mainpics/icons/profile-svgrepo-com.svg" alt="">
+
+                    <span>Login</span>
+
+                </a>
+                <a disabled>
+                    <img src="../../../assets/mainpics/icons/cart-svgrepo-com.svg" alt="">
+                    <span>Cart</span>
+                </a>
+            </div>
+        </div>
         </ng-template>
-     
-       
-   
-   </div>
+
+
+
+    </div>
 
 </header>
 <nav>
@@ -81,39 +88,38 @@
     <a routerLink="/products/Monitors">Monitors</a>
     <a routerLink="/products/Audio">Audio</a>
 </nav>
-<main><router-outlet></router-outlet></main>
-<div>
+<router-outlet></router-outlet>
+
 <footer>
 
     <div class="d1">
 
-        <span>Store Location </span> <br> <br> 
-        
+        <span>Store Location </span> <br> <br>
+
         <p>500 Terry Francois Street</p>
-        <p>  San Francisco, CA 94158</p> 
-        <p> info@mysite.com </p> 
-        <p> 123-456-7890</p> 
+        <p> San Francisco, CA 94158</p>
+        <p> info@mysite.com </p>
+        <p> 123-456-7890</p>
     </div>
     <div class="d2">
-            <span>Shop &#8595;</span><br> <br> 
-            <a routerLink="products/Laptops">Laptops</a><br>
-            <a routerLink="products/Accessories">Accessories</a><br>
-            <a routerLink="products/Monitors">Monitors</a><br>
-            <a routerLink="products/Audio">Audio</a>
+        <span>Shop &#8595;</span><br> <br>
+        <a routerLink="products/Laptops">Laptops</a><br>
+        <a routerLink="products/Accessories">Accessories</a><br>
+        <a routerLink="products/Monitors">Monitors</a><br>
+        <a routerLink="products/Audio">Audio</a>
     </div>
     <div class="d3">
-            <span>Customer Support &#8595;</span><br><br> 
-            <a href="">Contact US</a><br>
-            <a href="">Help Center</a><br>
-            <a href="">About US</a><br>
-            <a href="">Careers</a>
+        <span>Customer Support &#8595;</span><br><br>
+        <a href="">Contact US</a><br>
+        <a href="">Help Center</a><br>
+        <a href="">About US</a><br>
+        <a href="">Careers</a>
     </div>
     <div class="d4">
-            <span>Policy &#8595;</span><br><br> 
-            <a href="">Shipping & Returns</a><br>
-            <a href="">Terms & Conditions</a><br>
-            <a href="">Payement Methods</a><br>
-            <a href="">FAQ</a>
+        <span>Policy &#8595;</span><br><br>
+        <a href="">Shipping & Returns</a><br>
+        <a href="">Terms & Conditions</a><br>
+        <a href="">Payement Methods</a><br>
+        <a href="">FAQ</a>
     </div>
 </footer>
-</div>
