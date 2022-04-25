@@ -2,9 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Roboto:wght@500&display=swap');
 
 
-body {  margin: 0;
+body {  
+    min-height: 100vh;
+        display: flex;
+        flex-direction: column;
      font-family: 'poppins';
      background: #343434;
+    }
+
+    footer{
+        margin-top: auto;
     }
 
 header{

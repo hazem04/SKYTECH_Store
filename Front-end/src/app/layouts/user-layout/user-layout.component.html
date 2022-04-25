@@ -24,11 +24,11 @@
        
        <div class="dropdown-content">
            <p>Menu</p>
-           <a href="">Login</a>
-           <a href="">Signup</a>
-           <a href="" class="margin-bottom:2Em;">Cart</a>
+           <a routerLink="/signin">Login</a>
+           <a routerLink="/signup">Signup</a>
+           <a routerLink="/cart" class="margin-bottom:2Em;">Cart</a>
            <span>Categories</span>
-           <button routerLink="/products/ShopAll" class="margin-top:2Em;">shop all</button>
+           <a routerLink="/products/ShopAll" >shop all</a>
            <a routerLink="/products/Laptops">Laptops</a>
            <a routerLink="/products/Accessories">Accessories</a>
            <a routerLink="/products/Monitors">Monitors</a>
@@ -81,8 +81,8 @@
     <a routerLink="/products/Monitors">Monitors</a>
     <a routerLink="/products/Audio">Audio</a>
 </nav>
-<div><router-outlet></router-outlet></div>
-
+<main><router-outlet></router-outlet></main>
+<div>
 <footer>
 
     <div class="d1">
@@ -116,3 +116,4 @@
             <a href="">FAQ</a>
     </div>
 </footer>
+</div>
