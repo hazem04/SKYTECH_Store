@@ -20,19 +20,19 @@ h1{
     color:#94dce8;
 }
 h3{
-    color:#f4b33a;
+    color:#84c4d0;
 }
 .cont{
     min-height:100;
     display:block;
-    
+    height:90vh;
     /*background-color:rgb(244, 245, 246);*/
 }
 
 .card-content{
     
-    margin-left:15%;
-    margin-right:15%;
+    margin-left:10%;
+    margin-right:10%;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -40,9 +40,9 @@ h3{
 }
 
 .card{
-    background:#fff;
-    max-width:325px;
-    width:325px;
+   background-color: rgb(34, 34, 34);
+    max-width:400px;
+    width:400px;
     height:500px;
     margin:25px;
     box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
@@ -59,7 +59,7 @@ h3{
 .card-info{
     position:relative;
 
-    color:#222;
+    color: rgba(183, 183, 183, 0.575);
     padding:200px 20px 20px;
 }
 .card-info h3{

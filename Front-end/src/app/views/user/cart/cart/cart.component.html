@@ -66,7 +66,7 @@
                         <td style="padding-left:0;"><a class="cart-item-thumb  mr-sm-4" href="#"><img src="../../../../../assets/products/{{item.image_produit}}" height="100" alt="Product"></a></td>
                         <td class="align-middle">{{item.lib_produit}}</td>
                         <td class="fw-bold align-middle">{{item.prix_produit}}TND</td>
-                        <td class="fw-bold align-middle"><input class="form-control  form-control-sm" id="{{item.id_produit}}" type="number" min="0" value="{{item.qte_produit}}" (change)="changingQuantity(item)">
+                        <td class="fw-bold align-middle"><input class="form-control  form-control-sm" id="{{item.id_produit}}" type="number" min="1" value="{{item.qte_produit}}" (change)="changingQuantity(item)">
                             </td>
                         <td class="fw-bold align-middle">
                             <button class="btn btn-outline-dark btn-sm " type="button" (click)="deleteProduct(item)">
@@ -106,7 +106,7 @@
                     <button (click)="TotalPrice()" [disabled]="quantitySurpassed==true" routerLink="/payment" class="btn btn-block btn-success">Checkout</button>
                 </div>
               </div>
-              <span style="padding-left:100px;"><fa-icon class="icon" [icon]="faTruck"></fa-icon> FREE on orders of 50TND or more</span>
+              <span style="padding-left:100px;"><fa-icon class="icon" [icon]="faTruck"></fa-icon> FREE on orders of 200TND or more</span>
         </div>
         
     </ng-template>

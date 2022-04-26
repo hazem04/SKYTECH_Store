@@ -7,7 +7,7 @@ import { faCircleXmark, faCoffee, faCross, faTrash, faTruck } from '@fortawesome
 @Component({
   selector: 'app-homeuser',
   templateUrl: './homeuser.component.html',
-  styleUrls: ['./homeuser.component.css']
+  styleUrls: ['./homeuser.component.css','./struct.css']
 })
 export class HomeuserComponent implements OnInit {
   LoggedIn:boolean=false;

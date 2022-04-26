@@ -37,7 +37,7 @@ export class CartComponent implements OnInit {
       this.TotalPrice();
       this.merchandise = this.totalprice;
       this.shippingprice = "FREE";
-      if (this.totalprice < 100) {
+      if (this.totalprice < 200) {
         this.shippingprice = "7 TND";
         this.totalprice += 7;
       }
