@@ -19,8 +19,11 @@ export class UserLayoutComponent implements OnInit {
   }
   
   logout(){
-    this.auth.logout();
-    this.router.navigate(['/']);
+    this.auth.logout();      
+      this.router.navigateByUrl('/', {skipLocationChange: true}).then(() => {
+          this.router.navigate(['/']);
+      });
+  
   }
   login(){
     this.router.navigate(['/signin']);

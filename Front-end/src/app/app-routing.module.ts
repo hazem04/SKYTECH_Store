@@ -12,13 +12,14 @@ const routes: Routes = [
   {path: '',component:UserLayoutComponent,children:[
     {path:'',loadChildren:()=>import('./views/user/homeuser/homeuser.module').then(m=>m.HomeuserModule)},
     {path:'products/:cat',loadChildren:()=>import('./views/user/product/product.module').then(m=>m.ProductModule)},
-    {path:'cart',loadChildren:()=>import('./views/user/cart/cart.module').then(m=>m.CartModule)},
-    {path:'payment',loadChildren:()=>import('./views/user/payment/payment.module').then(m=>m.PaymentModule)}
+    {path:'cart',loadChildren:()=>import('./views/user/cart/cart.module').then(m=>m.CartModule)}
+    
   ]},
   {path:'admin',component:AdminLayoutComponent,children:[
     {path:'',loadChildren:()=>import('./views/admin/all-products/all-products.module').then(m=>m.AllProductsModule)},
     {path:'changeProduct/:edit',loadChildren:()=>import('./views/admin/change-product/change-product.module').then(m=>m.ChangeProductModule)}
   ]},
+  {path:'payment',loadChildren:()=>import('./views/user/payment/payment.module').then(m=>m.PaymentModule)},
   {path:'**',component:NotfoundComponent}
 
 ];
