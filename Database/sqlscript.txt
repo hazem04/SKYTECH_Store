@@ -62,7 +62,7 @@ INSERT INTO `categorie` (`id_cat`, `lib_cat`) VALUES
 INSERT INTO `categorie` (`id_cat`, `lib_cat`) VALUES
 (3, 'Monitors');
 INSERT INTO `categorie` (`id_cat`, `lib_cat`) VALUES
-(4, 'Laptop');
+(4, 'Laptops');
 
 -- --------------------------------------------------------
 
@@ -120,9 +120,14 @@ CREATE TABLE `produit` (
 -- Dumping data for table `produit`
 --
 
-INSERT INTO `produit` (`id_produit`, `lib_produit`, `prix_produit`, `img_produit`, `qte_produit`, `id_cat`, `mail_admin`, `description`) VALUES
-(1, 'Razer mouse', 15, 'sourismezyena', 50, 1, 'hazemhammami@gmail.com', 'Mamba elite'),
-(2, 'MSI keyboard', 20, 'taswirabehya', 45, 1, 'hazemhammami@gmail.com', 'Magic wand');
+INSERT INTO produit (id_produit, lib_produit, prix_produit, img_produit, qte_produit, id_cat, mail_admin, description) VALUES
+(10, 'mouse', 15, 'mouse1.png', 50, 1, 'hazemhammami@gmail.com', 'souris logitech');
+INSERT INTO produit (id_produit, lib_produit, prix_produit, img_produit, qte_produit, id_cat, mail_admin, description) VALUES
+(11, 'pc gamer', 2000, 'pcrazer1.png', 20, 4, 'hazemhammami@gmail.com', 'GTX 1080');
+INSERT INTO produit (id_produit, lib_produit, prix_produit, img_produit, qte_produit, id_cat, mail_admin, description) VALUES
+(12, 'keyboard', 25, 'keyboard2.png', 20, 1, 'hazemhammami@gmail.com', 'Magic wand MSI');
+INSERT INTO produit (id_produit, lib_produit, prix_produit, img_produit, qte_produit, id_cat, mail_admin, description) VALUES
+(13, 'headset', 130, 'headset2.jpg', 30, 2, 'hazemhammami@gmail.com', 'hyperX');
 
 -- --------------------------------------------------------
 
